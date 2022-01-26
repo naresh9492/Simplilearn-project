@@ -2,7 +2,7 @@ package project;
 
 public class ArrayRotationProgram {
 	public void rotate(int[] nums, int k) {
-		if(k > nums.length) 
+		if(k > nums.length) {
    			k=k%nums.length;
 		int[] result = new int[nums.length];
 		for(int i=0; i < k; i++){
@@ -11,7 +11,7 @@ public class ArrayRotationProgram {
 		int j=0;
 		for(int i=k; i<nums.length; i++){
     			result[i] = nums[j];
-j++;
+                          j++;
 		}
 		System.arraycopy( result, 0, nums, 0, nums.length );
 }
