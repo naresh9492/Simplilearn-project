@@ -7,7 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
   pageTitle: string = "Product List Page"
-  src = 'https://www.geeksforgeeks.org/wp-content/uploads/gfg_200X200-1.png';
+  imageWidth:number = 80;
+   imageMargin:number = 10;
+
+   showImage:boolean = false;
+
+   toggleImage() : void {
+       this.showImage = !this.showImage;
+       // (!false = true) // (!true == false)
+ console.log('Value of ShowImage inside function ::',                              this.showImage);   
+   }
+
+  
 
   constructor() { }
 
